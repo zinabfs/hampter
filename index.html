@@ -7,14 +7,26 @@
 </head>
 <body>
 
+<div class="gigadiv"  onmousemove="onMouse(event)"></div>
 <h1 class="text">hampter</h1>
+
 
 <audio class="vid" loop autoplay>
     <source src="files/hampter.mp3" type="audio/mp3">
 </audio>
 
 <script>
-    document.querySelector("body > audio").play();
+    //
+    //when le surcor bouge ya hamter en boucle
+    // plus gerne ca affiche hampter
+    function onMouse(e){
+        var x = e.clientX;
+        var y = e.clientY;
+
+
+        if (x != 0 || y !=0){
+            document.querySelector("body > audio").play();        }
+    }
 </script>
 </body>
 </html>
